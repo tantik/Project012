@@ -531,16 +531,27 @@ mark{
 
 .link-to-top{
 	position:fixed;
+	bottom:0;
+	right:0;
+	width:0;
+	height:0;
+	background:url(../images/link-to-top.png) no-repeat;
+	text-indent:-9999px;
+	z-index:810;
+	opacity:0;
+	-webkit-transition: opacity 0.5s ease;
+	-moz-transition: opacity 0.5s ease;
+	-o-transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
+	overflow:hidden;
+}
+.link-to-top.visible{
+	opacity:1;
 	bottom:65px;
 	right:65px;
 	width:76px;
 	height:76px;
-	background:url(../images/link-to-top.png) no-repeat;
-	text-indent:-9999px;
-	z-index:810;
-	overflow:hidden;
 }
-
 
 
 
