@@ -8,11 +8,12 @@ function initPage(){
 	initScrollController();
 	initPopup();
 	mobileMenu();
-	
-	
-	
-	
-	
+	//ロールオーバー：透明度で処理
+	$('.allbtn_ro a img, a img.btn_ro, .allbtn_ro input:image, input.btn_ro:image, .allbtn_txt a, .btn_txt').hover(function(){
+		$(this).stop().fadeTo(200, 0.6);
+	},function(){
+		$(this).stop().fadeTo(200, 1.00);
+	});
 }
 
 /* Mobile Menu */
