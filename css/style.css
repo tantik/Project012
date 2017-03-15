@@ -700,6 +700,7 @@ mark{
 	margin-bottom:28px;
 	line-height:28px;
 }
+.learning-block .infobox p mark{font-weight:bold;}
 .learning-block .infobox .image{
 	top:19px;
 	position:absolute;
@@ -803,7 +804,7 @@ mark{
 .tab-block .tab .box1 .text h4{
 	margin:0;
 	display:inline-block;	vertical-align:top;
-	padding:0 28px;
+	padding:0 20px;
 	-webkit-box-sizing:border-box;	-moz-box-sizing:border-box;	box-sizing:border-box;
 	max-width:396px;
 	position:relative;
@@ -816,6 +817,7 @@ mark{
 	line-height:28px;
 	font-weight:bold;
 	letter-spacing:-0.5px;
+	color:#ed0c0c;
 }
 .tab-block .tab .box1 .text h4:before{
 	content:'';	position:absolute;	bottom:0;	left:0;	width:22px;	height:48px;	background:url(../images/bg-l-title.png) no-repeat;
@@ -1042,12 +1044,15 @@ mark{
 }
 .tab-block .tab .cont .frame .price-box .price mark{
 	display:inline-block;	vertical-align:top;
-	font-size:60px;
+	font-size:56px;
 	line-height:60px;
 	font-weight:bold;
 	position:relative;
 	z-index:2;
+	color:#ed0c0c;
+	letter-spacing:-1px;
 }
+.tab-block .tab .cont .frame .price-box mark{color:#ed0c0c;}
 .tab-block .tab .cont .frame .price-box .price em{
 	display:inline-block;	vertical-align:top;
 	margin-top:36px;
@@ -1238,7 +1243,6 @@ mark{
 	font-size:14px;
 	line-height:24px;
 	font-weight:bold;
-	text-decoration:underline;
 }
 .courses.middle p{text-decoration:none;}
 .courses.middle{margin-bottom:40px;}
@@ -1312,6 +1316,7 @@ mark{
 	padding-left:20px;
 	background:url(../images/arrow-blue-footer.png) no-repeat 0 50%;
 }
+.bot-footer .blue-links a:hover{text-decoration:underline;}
 .bot-footer .bar{
 	padding:15px 15px 10px;
 	border-top:1px #e0e0e0 solid;
@@ -1335,6 +1340,7 @@ mark{
 	padding-left:20px;
 	background:url(../images/arrow-footer.png) no-repeat 0 50%;
 }
+.bot-footer .bar .links a:hover{text-decoration:underline;}
 .footer-nav{
 	margin:0 auto 8px;
 	padding-top:11px;
@@ -1479,6 +1485,7 @@ p.copyright{
 .popup.food-popup p{
 	margin:0;
 	line-height:20px;
+	font-size:12px;
 }
 .popup.food-popup p.yellow{margin-top:3px;}
 .popup.food-popup p.yellow span{
@@ -1509,11 +1516,13 @@ p.copyright{
 	font-weight:bold;
 	margin-bottom:15px;
 }
+.popup.overview-popup .top-holder p.info mark{color:#e6320f;}
 .popup.overview-popup h5{
 	margin-bottom:17px;
 	font-size:14px;
 	line-height:20px;
 }
+.popup.overview-popup h5 mark{color:#e6320f;}
 .popup.overview-popup .table{
 	margin-bottom:13px;
 	width:100%;
@@ -1540,6 +1549,12 @@ p.copyright{
 	line-height:24px;
 	margin-bottom:42px;
 }
+#tab6 .food-image{padding:0 20px;}
+#tab9 .cont p:first-child{
+	font-size:16px;
+	line-height:28px;
+}
+
 /* responsive view */
 @media screen and (max-width: 1024px) {
 	#header .seo-tag,
@@ -1570,12 +1585,30 @@ p.copyright{
 	.courses.middle.links .link a .icon-left{margin-right:10px;}
 	.courses.middle.links a span{font-size:12px;}
 }
+@media screen and (max-width: 1024px) {
+	.tab-block .tab .cont .frame .price-box .price mark{
+		letter-spacing:-2px;
+		font-size:44px;
+	}
+	.tab-block .tab .cont .frame .price-box .price .icon{
+		font-size:15px;
+	}
+	.tab-block .tab .cont .frame .price-box{
+	}
+}
 /* mobile view */
 @media screen and (min-width: 768px) {
 	.ps{display:block;}
 	.mobile-logo-add{display:none;}
 }
 @media screen and (max-width: 768px) {
+	.tab-block #tab7.tab .title h3{font-size:18px;}
+	#tab8 .cont p.top{text-align:left;}
+	#tab9 .cont p:first-child{
+		font-size:12px;
+		line-height:20px;
+	}
+	#tab6 .food-image{padding:0;}
 	.ps{display:none;}
 	#wrapper{padding-top:50px;}
 	#header,
@@ -1887,8 +1920,6 @@ p.copyright{
 		line-height:25px;
 		padding:0 10px;
 		min-width:135px;
-		width:155px;
-		display:block;
 	}
 	.bubble:after{
 		bottom:-5px;
@@ -2577,4 +2608,7 @@ p.copyright{
 	.nav-visible #header{display:block;}
 	.nav-visible .sp-bar,
 	.nav-visible .main-nav{background:#fff !important;}
+	.courses.middle.links a span{
+		background-size:14px;
+	}
 }
