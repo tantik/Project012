@@ -1571,7 +1571,11 @@ p.copyright{
 	.courses.middle.links a span{font-size:12px;}
 }
 /* mobile view */
+@media screen and (min-width: 768px) {
+	.ps{display:block;}
+}
 @media screen and (max-width: 768px) {
+	.ps{display:none;}
 	#wrapper{padding-top:50px;}
 	#header,
 	#header .holder{
@@ -1882,6 +1886,8 @@ p.copyright{
 		line-height:25px;
 		padding:0 10px;
 		min-width:135px;
+		width:155px;
+		display:block;
 	}
 	.bubble:after{
 		bottom:-5px;
@@ -1913,6 +1919,7 @@ p.copyright{
 		font-size:12px;
 		line-height:20px;
 		margin-bottom:15px;
+		text-align:left;
 	}
 	.info-block{padding-top:25px;}
 	.info-block .center-image{margin-bottom:10px;}
@@ -1925,6 +1932,7 @@ p.copyright{
 		margin-bottom:18px;
 		font-size:12px;
 		line-height:20px;
+		text-align:left;
 	}
 	.info-block .arrow-title{display:none;}
 	.tab-block{margin-bottom:18px;}
