@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	window.isMobile = (window.innerWidth <= 768 )? true : false;
 	initPage();
 });
 function initPage(){
