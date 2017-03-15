@@ -4,7 +4,7 @@ $(document).ready(function() {
 function initPage(){
 	initTopLinkButton();
 	initTabs();
-	initHeaderFix();
+	initScrollController();
 	initPopup();
 	mobileMenu();
 	
@@ -23,30 +23,55 @@ function mobileMenu(){
 }
 
 /* Fixed menu and scroll to top link */
-function initHeaderFix(){
+function initScrollController(){
 	
-	var headMenu = document.querySelector('.main-nav');
-	var mainHead = document.getElementById('header');
-	var needToScroll = headMenu.offsetTop - mainHead.clientHeight - 2; // 2 - border
+	var headMenu, mainHead, needToScroll, mobileButtonOffTop, mobileButtonsFix;
+	
+	0 == isMobile && (function(){ 
+	
+		headMenu = document.querySelector('.main-nav'), 
+		mainHead = document.getElementById('header'), 
+		needToScroll = (headMenu.offsetTop - mainHead.clientHeight - 2); 
+		
+	}()) || !!isMobile && (function(){ 
+		mobileButtonOffTop = document.querySelector('.button-holder');
+		mobileButtonsFix = document.querySelector('.mobile-buttons');
+	}());
 	
 	window.onscroll = function(){
+		
 		 var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 		 		
-		if(scrollPosition >= needToScroll){
-			document.body.classList.add('nav-fixed');
-			document.querySelector('.link-to-top').classList.add('visible');
-			
-			//return;
-		}
+		0 == isMobile && (function(){ 
 		
-		if(scrollPosition < needToScroll){
-			document.body.classList.remove('nav-fixed');
-			document.querySelector('.link-to-top').classList.remove('visible');
-		}
+			(scrollPosition >= needToScroll && (function(){
+				document.body.classList.add('nav-fixed');
+				document.querySelector('.link-to-top').classList.add('visible');
+				
+			}())) || (scrollPosition < needToScroll && (function(){
+				document.body.classList.remove('nav-fixed');
+				document.querySelector('.link-to-top').classList.remove('visible');
+			}()))
+			
+		}()) || !!isMobile && (function(){
+			
+			scrollPosition && scrollPosition > 0 && 
+				(document.querySelector('.link-to-top').classList.add('visible')) || 
+			!scrollPosition && 
+				(document.querySelector('.link-to-top').classList.remove('visible'))
+				
+			if(scrollPosition > mobileButtonOffTop.offsetTop - window.innerHeight + mobileButtonsFix.clientHeight)
+				mobileButtonsFix.style.display = 'none';
+			else
+				mobileButtonsFix.style.display = 'block';
+				
+			if( scrollPosition > mobileButtonOffTop.offsetTop + 50)
+				mobileButtonsFix.style.display = 'block';
+			
+		}())
 	}
 	
 }
-
 
 /* Link To Top */
 function initTopLinkButton(){
