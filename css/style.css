@@ -1573,6 +1573,7 @@ p.copyright{
 /* mobile view */
 @media screen and (min-width: 768px) {
 	.ps{display:block;}
+	.mobile-logo-add{display:none;}
 }
 @media screen and (max-width: 768px) {
 	.ps{display:none;}
@@ -1700,7 +1701,7 @@ p.copyright{
 	}
 	.promo-box .image-holder{
 		height:350px;
-		background:url(../images/bg-promo-sp.jpg) no-repeat 50% 50%;
+		background:url(../images/bg-promo-sp.png) no-repeat 50% 50%;
 		background-size:auto 100%;
 	}
 	.mobile-buttons{
@@ -2082,7 +2083,7 @@ p.copyright{
 		float:none;
 		margin-bottom:15px;
 	}
-	.food-block .tab .food-image{margin:15px 0 0;}
+	.food-block .tab .food-image{margin:15px 15px 0;}
 	.learning-block .head{padding:15px 15px 16px;}
 	.learning-block .head .bubble{min-width:65px;}
 	.bubble.blue:after{border-top: 5px solid #8fb2c5;}
@@ -2554,4 +2555,26 @@ p.copyright{
 		margin-bottom:15px;
 	}
 	.popup.food-popup .yelow-box h6{margin:0 0 2px !important;}
+	
+	.mobile-logo-add{
+		display: block;
+		position: absolute;
+		top: 16px;
+		left: 15px;
+		width: 101px;
+		height: 18px;
+		background: url(../images/logo-mobile.png) no-repeat;
+		background-size: 101px 18px;
+		text-indent: -9999px;
+		overflow: hidden;
+	}
+	.logo, .mobile-logo,
+	#header{display:none;}
+	.sp-bar,
+	.main-nav{background:none !important;}
+	.nav-visible .logo,
+	.nav-visible .mobile-logo,
+	.nav-visible #header{display:block;}
+	.nav-visible .sp-bar,
+	.nav-visible .main-nav{background:#fff !important;}
 }
