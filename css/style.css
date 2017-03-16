@@ -488,6 +488,14 @@ mark{
 	font-size:16px;
 	line-height:50px;
 	font-weight:bold;
+	position:relative;
+	top:0;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+}
+.tab .center-button:hover{
+	top:8px;
+	box-shadow:0 0 0 #8fb2c5;
 }
 /* risks box */
 .risks-box{
@@ -648,6 +656,14 @@ mark{
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
 	border-radius:5px;
+	position:relative;
+	top:0;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+}
+.diet-improve .lecturers .btn:hover{
+	top:8px;
+	box-shadow:0 0 0 #e4a3ae;
 }
 /* food block */
 .food-block{
@@ -1001,6 +1017,14 @@ mark{
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	padding-left:15px;
+	position:relative;
+	top:0;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+}
+.tab-block .tab .box1 .buttons .btn:hover{
+	top:8px;
+	box-shadow:0 0 0 #8fb2c5;
 }
 .tab-block .tab .box1 .buttons .btn:first-child{float:left;}
 .tab-block .tab .box p{margin-bottom:15px;}
@@ -1051,10 +1075,17 @@ mark{
 	background-image: -ms-linear-gradient(bottom, #2A6DC5 0%, #72A3D7 100%);
 	background-image: linear-gradient(to bottom, #2A6DC5 0%, #72A3D7 100%);
 	position:relative;
+	top:0;
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
 	border-radius:10px;
 	box-shadow:0 8px #134a91;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+}
+.tab-block .tab .button-holder .btn-blue:hover{
+	top:8px;
+	box-shadow:0 0 #134a91;
 }
 .tab-block .tab .button-holder .btn-red{
 	background:#e2514a;
@@ -1071,6 +1102,10 @@ mark{
 	background-image: -ms-linear-gradient(bottom, #D92C26 0%, #EB756F 100%);
 	background-image: linear-gradient(to bottom, #D92C26 0%, #EB756F 100%);
 	box-shadow:0 8px #931712;
+}
+.tab-block .tab .button-holder .btn-red:hover{
+	top:8px;
+	box-shadow:0 0 #931712;
 }
 .tab-block .tab .button-holder .btn-blue span,
 .tab-block .tab .button-holder .btn-red span{
@@ -1213,6 +1248,14 @@ mark{
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	padding-left:15px;
+	position:relative;
+	top:0;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+}
+.tab-block .tab .cont .btn:hover{
+	top:8px;
+	box-shadow:0 0 0 #8fb2c5;
 }
 .tab-block .tab .cont .notes{margin-bottom:32px;}
 .tab-block .tab .cont .img-bot{
@@ -1959,6 +2002,14 @@ p.copyright{
 		-moz-border-radius:5px;
 		border-radius:5px;
 		box-shadow:0 4px #134a91;
+		position:relative;
+		top:0;
+		transition: all 0.2s ease;
+		-webkit-transition: all 0.2s ease;
+	}
+	.mobile-buttons .btn-blue:hover{
+		top:4px;
+		box-shadow:0 0 #134a91;
 	}
 	.mobile-buttons .btn-blue{padding-left:15px;}
 	.mobile-buttons .btn-red{
@@ -1976,6 +2027,10 @@ p.copyright{
 		background-image: -ms-linear-gradient(bottom, #D92C26 0%, #EB756F 100%);
 		background-image: linear-gradient(to bottom, #D92C26 0%, #EB756F 100%);
 		box-shadow:0 4px #931712;
+	}
+	.mobile-buttons .btn-red:hover{
+		top:4px;
+		box-shadow:0 0 #931712;
 	}
 	.mobile-buttons .btn-blue span,
 	.mobile-buttons .btn-red span{
@@ -2201,6 +2256,7 @@ p.copyright{
 		background-position:7px 50%;
 		background-size:9px 9px;
 	}
+	.tab .center-button:hover{top:4px;}
 	.risks-box{
 		margin-bottom:25px;
 		padding:0 15px 2px;
@@ -2282,6 +2338,7 @@ p.copyright{
 		background-size:9px 9px;
 		padding-left:12px;
 	}
+	.diet-improve .lecturers .btn:hover{top:4px;}
 	.food-block{
 		padding-top:35px;
 		padding-bottom:10px;
@@ -2457,6 +2514,9 @@ p.copyright{
 		background-position: 7px 50%;
 		background-size: 9px 9px;
 	}
+	.tab-block .tab .box1 .buttons .btn:hover{
+		top:4px;
+	}
 	.tab-block .tab .box1 .tables{margin-bottom:15px;}
 	.tab-block .tab .box1 .holder{margin-bottom:10px;}
 	.tab-block .tab .box p.notes{
@@ -2481,6 +2541,10 @@ p.copyright{
 		-webkit-box-sizing:border-box;
 		-moz-box-sizing:border-box;
 		box-sizing:border-box;
+	}
+	.tab-block .tab .button-holder .btn-blue:hover,
+	.tab-block .tab .button-holder .btn-red:hover{
+		top:4px;
 	}
 	.tab-block .tab .button-holder{padding:14px 10px;}
 	.tab-block .tab .button-holder .btn-red{
@@ -2547,6 +2611,9 @@ p.copyright{
 		box-shadow: 0 4px 0 #8fb2c5;
 		background-position: 7px 50%;
 		background-size: 9px 9px;
+	}
+	.tab-block .tab .cont .btn:hover{
+		top:4px;
 	}
 	.tab-block #tab8.tab .box p.notes,
 	.tab-block #tab9.tab .box p.notes{margin-bottom:25px;}
