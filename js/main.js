@@ -7,6 +7,7 @@ function initPage(){
 	initTabs();
 	initScrollController();
 	initPopup();
+	fixedHeader();
 	mobileMenu();
 	//ロールオーバー：透明度で処理
 	$('.allbtn_ro a img, a img.btn_ro, .allbtn_ro input:image, input.btn_ro:image, .allbtn_txt a, .btn_txt').hover(function(){
@@ -15,6 +16,20 @@ function initPage(){
 		$(this).stop().fadeTo(200, 1.00);
 	});
 }
+
+
+// Fixed Header
+function fixedHeader(){
+	jQuery(document).on("scroll",function(){
+		if (jQuery(window).scrollTop() > 10){
+		    jQuery('body').addClass('small-header');
+		}else{
+		    jQuery('body').removeClass('small-header');
+		}
+	});
+	
+}
+
 
 /* Mobile Menu */
 function mobileMenu(){
