@@ -25,32 +25,40 @@ function mobileMenu(){
 }
 
 /* Fixed menu and scroll to top link */
-function initScrollController(){
-	
-	var headMenu, mainHead, needToScroll, mobileButtonOffTop, mobileButtonsFix;
+function ScrollController_render(_x){
 	
 	0 == isMobile && (function(){ 
 	
-		headMenu = document.querySelector('.main-nav'), 
-		mainHead = document.getElementById('header'), 
-		needToScroll = (headMenu.offsetTop - mainHead.clientHeight - 2); 
+		_x.headMenu = document.querySelector('.main-nav'), 
+		_x.mainHead = document.getElementById('header'), 
+		_x.needToScroll = (_x.headMenu.offsetTop - _x.mainHead.clientHeight - 2); 
 		
 	}()) || !!isMobile && (function(){ 
-		mobileButtonOffTop = document.querySelector('.button-holder');
-		mobileButtonsFix = document.querySelector('.mobile-buttons');
+		_x.mobileButtonOffTop = document.querySelector('.tab:not(.js-tab-hidden) .button-holder');
+		_x.mobileButtonsFix = document.querySelector('.mobile-buttons');
 	}());
+	
+}
+
+
+function initScrollController(){
+	
+	var _x = { headMenu:false, mainHead:false, needToScroll:false, mobileButtonOffTop:false, mobileButtonsFix:false };
+	
 	
 	window.onscroll = function(){
 		
 		 var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 		 		
+		ScrollController_render(_x);
+	
 		0 == isMobile && (function(){ 
 		
-			(scrollPosition >= needToScroll && (function(){
+			(scrollPosition >= _x.needToScroll && (function(){
 				document.body.classList.add('nav-fixed');
 				document.querySelector('.link-to-top').classList.add('visible');
 				
-			}())) || (scrollPosition < needToScroll && (function(){
+			}())) || (scrollPosition < _x.needToScroll && (function(){
 				document.body.classList.remove('nav-fixed');
 				document.querySelector('.link-to-top').classList.remove('visible');
 			}()))
@@ -62,13 +70,13 @@ function initScrollController(){
 			!scrollPosition && 
 				(document.querySelector('.link-to-top').classList.remove('visible'))
 				
-			if(scrollPosition > mobileButtonOffTop.offsetTop - window.innerHeight + mobileButtonsFix.clientHeight)
-				mobileButtonsFix.style.display = 'none';
+			if(scrollPosition > _x.mobileButtonOffTop.offsetTop - window.innerHeight + _x.mobileButtonsFix.clientHeight)
+				_x.mobileButtonsFix.style.display = 'none';
 			else
-				mobileButtonsFix.style.display = 'block';
+				_x.mobileButtonsFix.style.display = 'block';
 				
-			if( scrollPosition > mobileButtonOffTop.offsetTop + 50)
-				mobileButtonsFix.style.display = 'block';
+			if( scrollPosition > _x.mobileButtonOffTop.offsetTop + 50)
+				_x.mobileButtonsFix.style.display = 'block';
 			
 		}())
 	}
