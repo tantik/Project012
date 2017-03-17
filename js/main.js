@@ -37,6 +37,10 @@ function mobileMenu(){
 		e.preventDefault();
 		$('body').toggleClass('nav-visible');
 	});
+	//add 2017/03/17
+	$('a[href="#red-tabs"]').on("click",function(){
+		$('body').removeClass('nav-visible');
+	});
 }
 
 /* Fixed menu and scroll to top link */
