@@ -253,8 +253,7 @@ mark{
 	transition: opacity 0.5s ease;
 	-webkit-transition: opacity 0.5s ease;
 }
-.main-nav li.active:before,
-.main-nav li:hover:before{opacity:1;}
+.main-nav li.active:before{opacity:1;}
 .main-nav li:first-child{border-width:0 1px 1px;}
 .main-nav ul a{
 	display:block;
@@ -295,9 +294,7 @@ mark{
 	background-position:0 -30px;
 	opacity:0;
 }
-.main-nav ul a:hover:before{opacity:0;}
-.main-nav ul .active a:after,
-.main-nav ul a:hover:after{opacity:1;}
+.main-nav ul .active a:after{opacity:1;}
 .main-nav a.diet:before{background-position:-30px 0;}
 .main-nav a.diet:after{background-position:-30px -30px;}
 .main-nav a.advisor:before{background-position:-60px 0;}
