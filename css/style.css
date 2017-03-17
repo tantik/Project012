@@ -1871,8 +1871,6 @@ p.copyright{
 	.tab-block .tab .cont .frame .price-box .price .icon{
 		font-size:15px;
 	}
-	.tab-block .tab .cont .frame .price-box{
-	}
 }
 /* mobile view */
 @media screen and (min-width: 768px) {
@@ -1881,6 +1879,24 @@ p.copyright{
 	.sp{display: none !important;}
 }
 @media screen and (max-width: 768px) {
+	.iphone .allbtn_ro a,
+	.iphone .allbtn_ro a:hover,
+	.iphone .allbtn_ro a img,
+	.iphone .allbtn_ro a:hover img,
+	.iphone a:hover img.btn_ro,
+	.iphone a img.btn_ro,
+	.iphone a img.btn_ro,
+	.iphone a img.btn_ro:hover,
+	.iphone .allbtn_ro input[type="image"],
+	.iphone .allbtn_ro input[type="image"]:hover,
+	.iphone input.btn_ro[type="image"],
+	.iphone input.btn_ro[type="image"]:hover,
+	.iphone .allbtn_txt a,
+	.iphone .allbtn_txt a:hover,
+	.iphone .btn_txt,
+	.iphone .btn_txt:hover{
+		opacity:1 !important;
+	}
 	.pc{display: none !important;}
 	.tab-block #tab7.tab .title h3{font-size:18px;}
 	#tab8 .cont p.top{text-align:left;}
@@ -2040,7 +2056,9 @@ p.copyright{
 	}
 	.mobile-buttons .col:first-child{float:left;}
 	.mobile-buttons .btn-blue,
-	.mobile-buttons .btn-red{
+	.iphone .mobile-buttons .btn-blue:hover,
+	.mobile-buttons .btn-red,
+	.iphone .mobile-buttons .btn-red:hover{
 		display:block;
 		font-size:12px;
 		line-height:35px;
@@ -2067,7 +2085,8 @@ p.copyright{
 		box-shadow:0 0 #134a91;
 	}
 	.mobile-buttons .btn-blue{padding-left:15px;}
-	.mobile-buttons .btn-red{
+	.mobile-buttons .btn-red,
+	.iphone .mobile-buttons .btn-red:hover{
 		background: #eb766f;
 		background: -moz-linear-gradient(top,  #eb766f 0%, #d92d26 100%);
 		background: -webkit-linear-gradient(top,  #eb766f 0%,#d92d26 100%);
@@ -2310,7 +2329,8 @@ p.copyright{
 		background-size:12px 12px;
 	}
 	.tab .info-image{margin:15px 12px 12px;}
-	.tab .center-button{
+	.tab .center-button,
+	.iphone .tab .center-button:hover{
 		margin-bottom:14px;
 		font-size:12px;
 		line-height:35px;
@@ -2318,6 +2338,7 @@ p.copyright{
 		width:150px;
 		background-position:7px 50%;
 		background-size:9px 9px;
+		top:0;
 	}
 	.tab .center-button:hover{top:4px;}
 	.risks-box{
@@ -2393,13 +2414,15 @@ p.copyright{
 		line-height:17px;
 		margin-bottom:12px;
 	}
-	.diet-improve .lecturers .btn{
+	.diet-improve .lecturers .btn,
+	.iphone .diet-improve .lecturers .btn:hover{
 		font-size:12px;
 		line-height:35px;
 		box-shadow: 0 4px #e4a3ae;
 		background-position:7px 50%;
 		background-size:9px 9px;
 		padding-left:12px;
+		top:0;
 	}
 	.diet-improve .lecturers .btn:hover{top:4px;}
 	.food-block{
@@ -2574,12 +2597,14 @@ p.copyright{
 		font-size:18px;
 		line-height:20px;
 	}
-	.tab-block .tab .box1 .buttons .btn{
+	.tab-block .tab .box1 .buttons .btn,
+	.iphone .tab-block .tab .box1 .buttons .btn:hover{
 		font-size: 12px;
 		line-height: 35px;
 		box-shadow: 0 4px 0 #8fb2c5;
 		background-position: 7px 50%;
 		background-size: 9px 9px;
+		top:0;
 	}
 	.tab-block .tab .box1 .buttons .btn:hover{
 		top:4px;
@@ -2595,7 +2620,9 @@ p.copyright{
 		margin-bottom:5px !important;
 	}
 	.tab-block .tab .button-holder .btn-blue,
-	.tab-block .tab .button-holder .btn-red{
+	.iphone .tab-block .tab .button-holder .btn-blue:hover,
+	.tab-block .tab .button-holder .btn-red,
+	.iphone .tab-block .tab .button-holder .btn-red:hover{
 		width:140px;
 		padding-left: 15px;
 		font-size: 12px;
@@ -2608,13 +2635,16 @@ p.copyright{
 		-webkit-box-sizing:border-box;
 		-moz-box-sizing:border-box;
 		box-sizing:border-box;
+		top:0;
 	}
 	.tab-block .tab .button-holder .btn-blue:hover,
 	.tab-block .tab .button-holder .btn-red:hover{
 		top:4px;
 	}
 	.tab-block .tab .button-holder{padding:14px 10px;}
-	.tab-block .tab .button-holder .btn-red{
+	.tab-block .tab .button-holder .btn-red,
+	.iphone .tab-block .tab .button-holder .btn-red,
+	.iphone .tab-block .tab .button-holder .btn-red:hover{
 		box-shadow: 0 4px #931712;
 		padding:0;
 	}
@@ -2672,12 +2702,14 @@ p.copyright{
 	}
 	.tab-block .tab .cont .frame .price-box .price:before{height:5px;}
 	.tab-block .tab .cont .frame{margin-bottom:15px;}
-	.tab-block .tab .cont .btn{
+	.tab-block .tab .cont .btn,
+	.iphone .tab-block .tab .cont .btn:hover{
 		font-size: 12px;
 		line-height: 35px;
 		box-shadow: 0 4px 0 #8fb2c5;
 		background-position: 7px 50%;
 		background-size: 9px 9px;
+		top:0;
 	}
 	.tab-block .tab .cont .btn:hover{
 		top:4px;

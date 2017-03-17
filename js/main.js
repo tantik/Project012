@@ -15,7 +15,31 @@ function initPage(){
 	},function(){
 		$(this).stop().fadeTo(200, 1.00);
 	});
+	
+	getUserAgent('iphone','iphone',document.body);
 }
+
+
+
+function getUserAgent(need,className,element){
+  
+ var userAgent = window.navigator.userAgent.toLowerCase();
+ 
+ var result = userAgent.indexOf(need) !== -1;
+ 
+ if(result){
+  if(className != undefined && element != undefined && element instanceof Element){
+   element.classList.add(className);
+   return true;
+  }else{
+   return need;
+  }
+ }else{
+  return false;
+ }
+  
+}
+
 
 
 // Fixed Header
