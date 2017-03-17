@@ -1945,7 +1945,8 @@ p.copyright{
 	.main-nav{
 		position:fixed;
 		top:0;
-		left:0;
+		right:0;
+		left:auto;
 		width:100%;
 		height:100%;
 		overflow-y:auto;
@@ -1956,7 +1957,7 @@ p.copyright{
 		position:fixed;
 		top:0;
 		right:0;
-		width:80px;
+		width:70px;
 		background:#fff;
 		height:59px;
 		z-index:991;
@@ -2139,7 +2140,7 @@ p.copyright{
 	.main-nav{
 		position:fixed;
 		top:0;
-		width:60px;
+		width:70px;
 		height:59px;
 		background:#fff;
 		z-index:970px;
