@@ -142,7 +142,7 @@ mark{
 	-webkit-transition: opacity 0.5s ease;
 }
 .nav-fixed .phone{opacity:0 !important;}
-.phone a{
+.phone strong{
 	display:inline-block;
 	vertical-align:top;
 	padding-left:29px;
@@ -262,8 +262,18 @@ mark{
 	text-align:center;
 	white-space:nowrap;
 	position:relative;
+	z-index:2;
 }
-.main-nav ul a.gray{color:#b4c1d5;}
+.main-nav ul li.inactive:after{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:5;
+}
+.main-nav ul .inactive a{color:#b4c1d5;}
 .main-nav ul a.soon{
 	padding:39px 2px 0;
 	height:31px;
@@ -1906,10 +1916,10 @@ p.copyright{
 	}
 	#tab6 .food-image{padding:0;}
 	.ps{display:none;}
-	#wrapper{padding-top:50px;}
+	#wrapper{padding-top:59px;}
 	#header,
 	#header .holder{
-		height:50px;
+		height:59px;
 		border:0;
 		z-index:980;
 	}
@@ -1945,12 +1955,15 @@ p.copyright{
 	.sp-bar{
 		position:fixed;
 		top:0;
-		left:0;
-		width:100%;
+		right:0;
+		width:80px;
 		background:#fff;
-		height:50px;
+		height:59px;
 		z-index:991;
 		display:block;
+	}
+	.nav-visible .sp-bar{
+		width:100%;
 	}
 	.mobile-opener{
 		display:block;
@@ -1958,10 +1971,10 @@ p.copyright{
 		outline:none;
 		top:7px;
 		right:15px;
-		width:35px;
-		height:35px;
+		width:45px;
+		height:45px;
 		background:url(../images/bg-mobile-opener.png) no-repeat;
-		background-size:35px 35px;
+		background-size:44px 44px;
 		z-index: 995;
 		-webkit-transition: background .3s;
 		transition: background .3s;
@@ -1972,9 +1985,9 @@ p.copyright{
 	.mobile-opener span {
 		display: block;
 		position: absolute;
-		top: 12px;
-		left: 10px;
-		right: 10px;
+		top: 18px;
+		left: 15px;
+		right: 15px;
 		height: 2px;
 		background: #fff;
 		-webkit-transition: background 0s .3s;
@@ -2118,7 +2131,7 @@ p.copyright{
 		transform: translateY(-50%);
 	}
 	.link-to-top.visible{
-		right:15px;
+		right:25px;
 		width:38px;
 		height:38px;
 		background-size:38px 38px;
@@ -2126,19 +2139,19 @@ p.copyright{
 	.main-nav{
 		position:fixed;
 		top:0;
-		left:0;
-		width:100%;
-		height:50px;
+		width:60px;
+		height:59px;
 		background:#fff;
 		z-index:970px;
 		-webkit-box-sizing:border-box;
 		-moz-box-sizing:border-box;
 		box-sizing:border-box;
-		text-align:left; 
+		text-align:left;
 	}
 	.nav-visible .main-nav{
 		height:100%;
-		padding:55px 15px 0;
+		width:100%;
+		padding:65px 15px 0;
 		overflow-y:auto;
 	}
 	.main-nav nav{
@@ -2230,11 +2243,11 @@ p.copyright{
 		padding:20px 0 25px;
 	}
 	.bubble{
-		margin-bottom:12px;
-		font-size:10px;
+		margin-bottom:15px;
+		font-size:12px;
 		line-height:25px;
 		padding:0 10px;
-		min-width:135px;
+		min-width:145px;
 	}
 	.bubble:after{
 		bottom:-5px;
@@ -2244,10 +2257,10 @@ p.copyright{
 		border-top: 5px solid #fd355c;
 	}
 	.learn-info h3{
-		font-size:12px;
-		line-height:20px;
+		font-size:18px;
+		line-height:24px;
 		border:0;
-		margin-bottom:11px;
+		margin-bottom:15px;
 	}
 	.learn-info h3 span{
 		margin-bottom:5px;
@@ -2255,10 +2268,11 @@ p.copyright{
 		border-bottom:2px #fd355c solid;
 	}
 	.learn-info h2{
-		margin-bottom:20px;
-		font-size:15px;
-		line-height:25px;
+		margin-bottom:25px;
+		font-size:20px;
+		line-height:26px;
 	}
+	.learn-info h2 span{display:block;}
 	.learn-info h2 mark{
 		font-size:20px;
 	}
@@ -2269,19 +2283,38 @@ p.copyright{
 		text-align:left;
 	}
 	.info-block{padding-top:25px;}
-	.info-block .center-image{margin-bottom:10px;}
+	.info-block .center-image{margin-bottom:0;}
 	.info-block h2{
-		margin-bottom:8px;
-		font-size:15px;
-		line-height:25px;
+		margin-bottom:10px;
+		font-size:18px;
+		line-height:24px;
 	}
+	.info-block h2 span{display:block;}
 	.info-block .heading p{
 		margin-bottom:18px;
 		font-size:12px;
 		line-height:20px;
 		text-align:left;
 	}
-	.info-block .arrow-title{display:none;}
+	.arrow-title{
+		padding-top:15px;
+		margin:0 -10px 15px;
+		min-height:67px;
+	}
+	.arrow-title:before{
+		bottom:auto;
+		top:0;
+		border-left:109px solid transparent;
+		border-right:109px solid transparent;
+		border-top:67px solid #fff;
+		margin-left:-109px;
+	}
+	.arrow-title h3{
+		font-size:16px;
+		line-height:25px;
+	}
+	.arrow-title span{display:block;}
+	.arrow-title h3 strong{font-size:20px;}
 	.tab-block{margin-bottom:18px;}
 	.red-tabs .tab-block{
 		margin:0;
@@ -2383,8 +2416,8 @@ p.copyright{
 	.diet-improve h2{
 		margin-bottom:7px;
 		text-align:center;
-		font-size:15px;
-		line-height:21px;
+		font-size:18px;
+		line-height:28px;
 	}
 	.diet-improve h2 span:after{height:2px;}
 	.diet-improve .text p{margin:0;}
@@ -2431,24 +2464,26 @@ p.copyright{
 		background-size:170% auto;
 	}
 	.food-block h2{
-		margin-bottom:10px;
-		font-size:15px;
-		line-height:25px;
+		margin-bottom:15px;
+		font-size:20px;
+		line-height:26px;
 	}
 	.food-block h2 mark{font-size:20px;}
-	.food-block .bubble{margin-bottom:16px;}
+	.food-block .bubble{margin-bottom:15px;}
+	.food-block .tab-block{margin-top:0;}
 	.food-block .tab .food-image img{
 		width:100%;
 		float:none;
-		margin-bottom:15px;
+		margin-bottom:5px;
 	}
-	.food-block .tab .food-image{margin:15px 15px 0;}
+	.food-block .tab .food-image{margin:15px 33px 0;}
 	.learning-block .head{padding:15px 15px 16px;}
-	.learning-block .head .bubble{min-width:65px;}
+	.learning-block .head .bubble{min-width:70px;}
 	.bubble.blue:after{border-top: 5px solid #8fb2c5;}
 	.learning-block .head h3{
-		font-size:13px;
-		line-height:21px;
+		font-size:17px;
+		line-height:24px;
+		margin-bottom:3px;
 	}
 	.learning-block .heading{padding-top:20px;}
 	.learning-block .heading h2{
@@ -2486,8 +2521,8 @@ p.copyright{
 		float:none;
 	}
 	.learning-block .infobox h4{
-		font-size:15px;
-		line-height:25px;
+		font-size:20px;
+		line-height:26px;
 		text-align:center;
 		margin-bottom:11px;
 	}
@@ -2624,7 +2659,7 @@ p.copyright{
 	.tab-block .tab .button-holder .btn-red,
 	.iphone .tab-block .tab .button-holder .btn-red:hover{
 		width:140px;
-		padding-left: 15px;
+		padding:5px 0 5px 15px;
 		font-size: 12px;
 		line-height: 35px;
 		font-weight: bold;
@@ -2646,7 +2681,7 @@ p.copyright{
 	.iphone .tab-block .tab .button-holder .btn-red,
 	.iphone .tab-block .tab .button-holder .btn-red:hover{
 		box-shadow: 0 4px #931712;
-		padding:0;
+		padding:5px 0;
 	}
 	.tab-block .tab .button-holder .btn-blue .icon {
 		position: absolute;
